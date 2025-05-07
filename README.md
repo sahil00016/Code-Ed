@@ -11,7 +11,7 @@ react-markdown (in client)
 rehype-highlight(in client)
 axios (in client)
 cors (in server)
-@google/generative-ai (in server
+@google/generative-ai (in server)
 
 #TO access the project:
 firstly run the server:

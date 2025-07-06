@@ -41,10 +41,21 @@ A modern, full-stack AI-powered code review platform.
 
 ## 🖼️ Screenshots
 
-> _Add your screenshots here!_  
-> Example:
-> ![Code Editor Screenshot](./screenshots/editor.png)
-> ![Review Modal Screenshot](./screenshots/review-modal.png)
+![image](https://github.com/user-attachments/assets/f6695c21-dda6-4e55-957b-6592669918fc)
+![image](https://github.com/user-attachments/assets/11151caf-45ea-4eba-bc08-6821d506cb27)
+![image](https://github.com/user-attachments/assets/1780aa8d-2ee8-47e6-8f8e-3fd319b78715)
+![image](https://github.com/user-attachments/assets/1abe03a5-bbb4-49df-b075-d0b5249ebed4)
+![image](https://github.com/user-attachments/assets/d119a588-bfb2-4b51-84bf-cf4cca931853)
+![image](https://github.com/user-attachments/assets/cb0607df-6b85-4e55-adfd-4d514aba2138)
+![image](https://github.com/user-attachments/assets/ce5e19d3-4e91-4ed4-9959-83f1dba40f53)
+![image](https://github.com/user-attachments/assets/0f74a1af-cfc2-40dd-aae9-f98dc99de6c6)
+
+
+
+
+
+
+
 
 ---
 

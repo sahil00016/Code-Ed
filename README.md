@@ -56,9 +56,7 @@ A modern, full-stack AI-powered code review platform.
 
 ## 🎥 Demo Video
 
-> _Coming soon!_  
-> _You can embed your YouTube/Vimeo demo here:_
-> [![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+https://drive.google.com/file/d/1sKh6_Im-_2yXGhxtKQt2Qvof34dZVGOh/view?usp=sharing
 
 ---
 

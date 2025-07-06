@@ -78,10 +78,12 @@ function App() {
     });
   }
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   async function reviewCode() {
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:5000/ai/get-review', { code })
+      const response = await axios.post(`${API_URL}/ai/get-review`, { code })
       setReview(response.data.review || response.data)
       setPromptResponse(null)
       saveCurrentToHistory(response.data.review || response.data, null)
@@ -96,7 +98,7 @@ function App() {
     if (!prompt.trim()) return;
     setLoading(true)
     try {
-      const response = await axios.post('http://localhost:5000/ai/get-review', { code, prompt })
+      const response = await axios.post(`${API_URL}/ai/get-review`, { code, prompt })
       setReview(response.data.review)
       setPromptResponse(response.data.promptResponse)
       saveCurrentToHistory(response.data.review, response.data.promptResponse)

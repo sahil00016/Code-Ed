@@ -40,6 +40,11 @@ A modern, full-stack AI-powered code review platform.
    - Get instant feedback for actions like review generation, login, sign out, sharing, and more.
 
 ---
+## 🎥 Demo Video
+
+https://drive.google.com/file/d/1sKh6_Im-_2yXGhxtKQt2Qvof34dZVGOh/view?usp=sharing
+
+---
 
 ## 🖼️ Screenshots
 
@@ -51,12 +56,6 @@ A modern, full-stack AI-powered code review platform.
 ![image](https://github.com/user-attachments/assets/cb0607df-6b85-4e55-adfd-4d514aba2138)
 ![image](https://github.com/user-attachments/assets/ce5e19d3-4e91-4ed4-9959-83f1dba40f53)
 ![image](https://github.com/user-attachments/assets/0f74a1af-cfc2-40dd-aae9-f98dc99de6c6)
-
----
-
-## 🎥 Demo Video
-
-https://drive.google.com/file/d/1sKh6_Im-_2yXGhxtKQt2Qvof34dZVGOh/view?usp=sharing
 
 ---
 

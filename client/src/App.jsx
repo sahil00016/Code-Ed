@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import "prismjs/themes/prism-tomorrow.css"
 import Editor from "react-simple-code-editor"
 import prism from "prismjs"
@@ -7,8 +7,10 @@ import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 import axios from 'axios'
 import './App.css'
-import { SignedIn, SignedOut, SignIn, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignIn, UserButton, useAuth } from "@clerk/clerk-react";
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // LocalStorage utilities
 const HISTORY_KEY = 'codeEdHistory';
@@ -47,6 +49,8 @@ function App() {
   const [showSharedReview, setShowSharedReview] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const { isSignedIn } = useAuth();
+  const prevSignedIn = useRef(isSignedIn);
 
   // On app load, check for #share=...
   useEffect(() => {
@@ -114,9 +118,11 @@ function App() {
       setReview(response.data.review || response.data)
       setPromptResponse(null)
       saveCurrentToHistory(response.data.review || response.data, null)
+      toast.success('Review generated!');
     } catch {
       setReview('Error fetching review. Please try again.')
       setPromptResponse(null)
+      toast.error('Failed to fetch review.');
     }
     setLoading(false)
   }
@@ -129,9 +135,11 @@ function App() {
       setReview(response.data.review)
       setPromptResponse(response.data.promptResponse)
       saveCurrentToHistory(response.data.review, response.data.promptResponse)
+      toast.success('Improvise response generated!');
     } catch {
       setReview('Error fetching review. Please try again.')
       setPromptResponse(null)
+      toast.error('Failed to fetch improvise response.');
     }
     setLoading(false)
   }
@@ -149,10 +157,10 @@ function App() {
     deleteHistoryItem(ts)
     setHistory(getHistory())
     setSelectedHistory(null)
+    toast.info('History item deleted.');
   }
 
   async function handleShareHistory(item) {
-    // Save review to backend and get ID
     try {
       const response = await axios.post(`${API_URL}/ai/review`, {
         code: item.code,
@@ -164,9 +172,9 @@ function App() {
       const id = response.data.id;
       const url = `${window.location.origin}/review/${id}`;
       navigator.clipboard.writeText(url);
-      alert('Shareable link copied to clipboard!');
+      toast.success('Shareable link copied to clipboard!');
     } catch {
-      alert('Failed to create shareable link.');
+      toast.error('Failed to create shareable link.');
     }
   }
 
@@ -200,8 +208,19 @@ function App() {
     return new Date(ts).toLocaleString()
   }
 
+  useEffect(() => {
+    if (!prevSignedIn.current && isSignedIn) {
+      toast.success('Logged in successfully!');
+    }
+    if (prevSignedIn.current && !isSignedIn) {
+      toast.info('Signed out successfully!');
+    }
+    prevSignedIn.current = isSignedIn;
+  }, [isSignedIn]);
+
   return (
     <>
+      <ToastContainer position="bottom-right" autoClose={2500} hideProgressBar={false} newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover />
       <SignedOut>
         <div className="auth-center">
           <SignIn />

@@ -1,5 +1,7 @@
 # Code-Ed: AI Code Review Tool
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-code--ed--flax.vercel.app-brightgreen?style=flat-square)](https://code-ed-flax.vercel.app/)
+
 A modern, full-stack AI-powered code review platform.  
 - **Frontend:** React + Vite + Clerk Auth + React Toastify  
 - **Backend:** Node.js + Express + Google Gemini AI + File-based DB  
@@ -50,13 +52,6 @@ A modern, full-stack AI-powered code review platform.
 ![image](https://github.com/user-attachments/assets/ce5e19d3-4e91-4ed4-9959-83f1dba40f53)
 ![image](https://github.com/user-attachments/assets/0f74a1af-cfc2-40dd-aae9-f98dc99de6c6)
 
-
-
-
-
-
-
-
 ---
 
 ## 🎥 Demo Video
@@ -106,6 +101,7 @@ npm run dev
 
 ## 🌐 Deployment
 
+- **Live Demo:** [https://code-ed-flax.vercel.app/](https://code-ed-flax.vercel.app/)
 - **Frontend:** Deploy the `client` folder to [Vercel](https://vercel.com/).
 - **Backend:** Deploy the `server` folder to [Render](https://render.com/).
 - Set environment variables in both platforms as described above.

@@ -1,34 +1,130 @@
-# React + Vite
+# Code-Ed: AI Code Review Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, full-stack AI-powered code review platform.  
+- **Frontend:** React + Vite + Clerk Auth + React Toastify  
+- **Backend:** Node.js + Express + Google Gemini AI + File-based DB  
+- **Features:** Code review, improvise, history, shareable links, authentication, notifications, and more.
 
-Description : This is an ai-based code editor for development can also be used for programming this project allows users to get a review of their code using google gemini model and also get suggestions to fix and improve the performance of their existing code.
+---
 
-dependencies to install before running the project:
-prismjs (in client)
-react-simple-code-editor (in client)
-react-markdown (in client)
-rehype-highlight(in client)
-axios (in client)
-cors (in server)
-@google/generative-ai (in server)
+## ✨ Features
 
-#TO access the project:
-firstly run the server:
-Open the server folder with integrated terminal then type: npx nodemon
+- **AI Code Review:** Get instant, high-quality code reviews powered by Google Gemini.
+- **Improvise:** Guide the AI with custom prompts for tailored suggestions.
+- **History:** All your reviews are saved locally for easy access and management.
+- **Shareable Links:** Share reviews across devices and users with secure, backend-powered links.
+- **Authentication:** Secure sign-in/sign-out with Clerk.
+- **Notifications:** Beautiful toast notifications for all key actions.
+- **Modern UI:** Professional, responsive, and user-friendly interface.
 
-secondly run the client:
-Open the client folder with another integrated terminal then type: npm run dev
+---
 
-Congratulations!! Your project is live on localhost.
+## 🚀 Project Flow
 
-Gemini api key used you might need to change it if it expires in future
-to chaange api key go to server -> .env there change the key retreived from https://aistudio.google.com/apikey choose model mentioned
-GEMINI model used : gemini-2.0-flash then run the server and client again 
+1. **Sign In:**  
+   Users authenticate via Clerk for a secure, personalized experience.
 
-Project design and working:
-![image](https://github.com/user-attachments/assets/61a32b26-f259-4340-9dba-818fa51c4de7)
-![image](https://github.com/user-attachments/assets/43a68aed-5415-445b-8370-af592b162a0f)
+2. **Code Review:**  
+   - Paste or write your code in the editor.
+   - Click **Review** to get an AI-generated review.
+   - Optionally, add a prompt and click **Improvise** for custom feedback.
+
+3. **History & Sharing:**  
+   - All reviews are saved in your history.
+   - Click the share icon to generate a unique, shareable link.
+   - Anyone with the link (and who is signed in) can view the review in a read-only modal.
+
+4. **Notifications:**  
+   - Get instant feedback for actions like review generation, login, sign out, sharing, and more.
+
+---
+
+## 🖼️ Screenshots
+
+> _Add your screenshots here!_  
+> Example:
+> ![Code Editor Screenshot](./screenshots/editor.png)
+> ![Review Modal Screenshot](./screenshots/review-modal.png)
+
+---
+
+## 🎥 Demo Video
+
+> _Coming soon!_  
+> _You can embed your YouTube/Vimeo demo here:_
+> [![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+---
+
+## 🛠️ Getting Started (Local Development)
+
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/sahil00016/Code-Ed.git
+cd Code-Ed
+```
+
+### **2. Setup the Backend**
+```sh
+cd server
+npm install
+# Create a .env file with your Google Gemini API key and any other secrets:
+# Example:
+# GEMINI_API_KEY=your-gemini-api-key
+npm run dev
+# The backend will run on http://localhost:5000
+```
+
+### **3. Setup the Frontend**
+```sh
+cd ../client
+npm install
+# Create a .env file with your Clerk publishable key and backend URL:
+# Example:
+# VITE_CLERK_PUBLISHABLE_KEY=your-clerk-key
+# VITE_API_URL=http://localhost:5000
+npm run dev
+# The frontend will run on http://localhost:5173
+```
+
+### **4. Open in Browser**
+- Visit [http://localhost:5173](http://localhost:5173)
+- Sign in, and start reviewing code!
+
+---
+
+## 🌐 Deployment
+
+- **Frontend:** Deploy the `client` folder to [Vercel](https://vercel.com/).
+- **Backend:** Deploy the `server` folder to [Render](https://render.com/).
+- Set environment variables in both platforms as described above.
+- For Vercel, ensure you have a `vercel.json` file in `client` for SPA routing.
+
+---
+
+## 📝 Customization & Contribution
+
+- Fork the repo, make your changes, and submit a pull request!
+- You can easily swap out the AI provider, add new features, or connect to a real database.
+
+---
+
+## 🙏 Credits
+
+- [Clerk](https://clerk.com/) for authentication
+- [Google Gemini](https://ai.google.dev/) for AI reviews
+- [React Toastify](https://fkhadra.github.io/react-toastify/) for notifications
+- [Vercel](https://vercel.com/) and [Render](https://render.com/) for deployment
+
+---
+
+## 📧 Contact
+
+For questions, suggestions, or collaboration, open an issue or reach out via [your preferred contact method].
+
+---
+
+> _Star ⭐ this repo if you found it helpful!_
 
 
 
